@@ -1,14 +1,14 @@
 ---
 // PhotoTestimonials.astro
 const photos = [
-  { img: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=600&auto=format&fit=crop", caption: "ธุรกิจร้านอาหาร ได้รับสินเชื่อ 5 ล้านบาท" },
-  { img: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=600&auto=format&fit=crop", caption: "โรงงานผลิตอะไหล่ ยื่นกู้ซื้อเครื่องจักรสำเร็จ" },
-  { img: "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=600&auto=format&fit=crop", caption: "ธุรกิจซัพพลายเออร์ ได้วงเงิน OD เพิ่ม 10 ล้าน" },
-  { img: "https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=600&auto=format&fit=crop", caption: "ขยายแฟรนไชส์กาแฟ อนุมัติสินเชื่อภายใน 14 วัน" },
-  { img: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=600&auto=format&fit=crop", caption: "คลินิกความงาม ได้รับเงินทุนสำหรับเปิดสาขาใหม่" },
-  { img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=600&auto=format&fit=crop", caption: "เต็นท์รถมือสอง แหล่งเงินทุนหมุนเวียนธุรกิจ" },
-  { img: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=600&auto=format&fit=crop", caption: "ธุรกิจรับเหมาก่อสร้าง ได้รับค้ำประกันซอง (LG)" },
-  { img: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=600&auto=format&fit=crop", caption: "ธุรกิจโรงแรมรีสอร์ท กู้รีไฟแนนซ์ลดดอกเบี้ย" },
+  { img: "/asset/images/ibf1.jpg"},
+  { img: "/asset/images/ibf2.jpg"},
+  { img: "/asset/images/ibf3.jpg"},
+  { img: "/asset/images/ibf4.jpg"},
+  { img: "/asset/images/ibf5.jpg"},
+  { img: "/asset/images/ibf6.jpg"},
+  { img: "/asset/images/ibf8.jpg"},
+  { img: "/asset/images/ibf9.jpg"},
 ];
 ---
 <section class="py-24 bg-black border-t border-red-500/40 relative">
@@ -17,7 +17,7 @@ const photos = [
       <div class="max-w-2xl">
         <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 tracking-tight">ความสำเร็จของลูกค้า <span class="text-yellow-400">SME</span></h2>
         <p class="text-lg text-gray-400">
-          ตัวอย่างส่วนหนึ่งของธุรกิจที่เรายินดีให้คำปรึกษาและซัพพอร์ตจนได้รับเงินทุนนำไปขยายกิจการ
+          ตัวอย่างส่วนหนึ่งของธุรกิจที่เรายินดีให้คำปรึกษาและซัพพอร์ตจนได้รับเงินทุนนำไปต่อยอดและแก้ไขปัญหาให้กิจการ
         </p>
       </div>
     </div>
@@ -29,18 +29,18 @@ const photos = [
           <div class="relative aspect-square overflow-hidden bg-black/50">
             <img 
               src={item.img} 
-              alt={item.caption} 
+              
               class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               loading="lazy"
             />
             {/* Elegant vignette overlay */}
             <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80 mix-blend-multiply"></div>
           </div>
-          <figcaption class="p-4 md:p-5 flex-grow flex items-center">
+          {/* <figcaption class="p-4 md:p-5 flex-grow flex items-center">
             <p class="text-sm md:text-base font-medium text-gray-200 leading-snug">
               {item.caption}
             </p>
-          </figcaption>
+          </figcaption> */}
         </figure>
       ))}
     </div>

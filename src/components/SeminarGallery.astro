@@ -1,11 +1,7 @@
 ---
 // SeminarGallery.astro
 const images = [
-  "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop", // Main large image
-  "https://images.unsplash.com/photo-1556761175-129418cb210d?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1515169067868-5387ec356754?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1558403194-611308249627?q=80&w=800&auto=format&fit=crop"
+  "/asset/images/ISBseminar2.jpg", // Main large image
 ];
 ---
 <section class="py-20 bg-black border-t border-red-500/40 relative overflow-hidden">
@@ -20,7 +16,7 @@ const images = [
         บรรยากาศการสัมมนาและ<br class="hidden sm:block"/>การให้คำปรึกษาธุรกิจ
       </h2>
       <p class="text-lg md:text-xl text-gray-400 font-light leading-relaxed text-balance">
-        ทีม Win WinWealth Creation ให้คำแนะนำกับผู้ประกอบการ SME จากหลากหลายอุตสาหกรรม
+        พี่วิน ให้คำแนะนำกับผู้ประกอบการ SME จากหลากหลายอุตสาหกรรม
       </p>
     </div>
 
@@ -40,7 +36,7 @@ const images = [
       </div>
 
       {/* 2. Smaller Image Grid */}
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+      <!-- <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
         {images.slice(1).map((src) => (
           <div class="group relative aspect-square overflow-hidden rounded-xl md:rounded-2xl bg-neutral-900 border border-white/5 shadow-lg">
             <img 
@@ -52,7 +48,7 @@ const images = [
             <div class="absolute inset-0 bg-yellow-900/20 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>
         ))}
-      </div>
+      </div> -->
       
     </div>
   </div>
