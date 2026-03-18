@@ -1,0 +1,33 @@
+---
+// ContactCTA.astro
+---
+<section id="contact" class="relative py-32 bg-black border-t border-red-500/40 overflow-hidden">
+  <!-- Subtle patterns -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute inset-y-0 left-1/2 w-0.5 bg-yellow-400/30 h-full -translate-x-1/2"></div>
+    <div class="absolute inset-x-0 top-1/2 h-0.5 bg-yellow-400/30 w-full -translate-y-1/2"></div>
+  </div>
+  
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-red-900/10 blur-3xl mix-blend-screen pointer-events-none"></div>
+
+  <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+    
+    <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-black/50 mb-8 backdrop-blur-sm border border-yellow-400/30 ring-4 ring-red-500/10">
+      <svg class="w-10 h-10 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+    </div>
+
+    <h2 class="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-6 tracking-tight text-balance leading-tight">
+      เริ่มปรึกษาธุรกิจของคุณวันนี้
+    </h2>
+    <p class="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+      ติดต่อทีมที่ปรึกษาของ Win WinWealth Creation เพื่อประเมินความเป็นไปได้และวางแผนกลยุทธ์การเงินฟรี ไม่มีค่าใช้จ่ายเบื้องต้น
+    </p>
+    
+    <a href="https://line.me/ti/p/XXXXXXXX" target="_blank" rel="noopener noreferrer" class="group relative inline-flex items-center justify-center gap-4 px-8 py-5 md:px-12 text-xl md:text-2xl font-bold rounded-full bg-yellow-400 text-black transition-all hover:scale-105 hover:bg-yellow-500 hover:shadow-[0_0_30px_-5px_rgba(250,204,21,0.5)] shadow-xl w-full sm:w-auto">
+      <span>Add LINE เพื่อปรึกษาฟรี</span>
+      <div class="flex items-center justify-center w-8 h-8 rounded-full bg-black/5 text-black transition-transform group-hover:rotate-12">
+        <svg class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.608.391.084.922.258 1.057.592.114.281.086.71.043 1.006-.062.434-.316 1.942-.387 2.365-.084.512-.429 2.111 1.83.693 2.261-1.416 11.422-7.854 11.422-14.264zm-14.004 2.89H8.169c-.439 0-.796-.356-.796-.796 0-.44.357-.796.796-.796h1.031V9.576H8.169c-.439 0-.796-.356-.796-.796 0-.439.357-.795.796-.795h1.827c.439 0 .796.356.796.795v3.618c0 .44-.357.796-.796.796zm3.321 0h-1.611c-.439 0-.796-.356-.796-.796 0-.44.357-.796.796-.796h1.611c.439 0 .796.356.796.796 0 .44-.357.796-.796.796zm3.179 0h-1.026v-1.921l-1.422 1.802c-.145.184-.366.289-.597.289-.126 0-.256-.029-.378-.088-.288-.139-.47-.432-.47-.751V9.576c0-.439.357-.795.795-.795.44 0 .796.356.796.795v1.921l1.422-1.802c.15-.19.382-.294.619-.283.332.015.602.247.666.571.01.05.016.103.016.155v3.618c0 .44-.356.796-.795.796z"/></svg>
+      </div>
+    </a>
+  </div>
+</section>
