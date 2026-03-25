@@ -1,48 +1,58 @@
 ---
-// PhotoTestimonials.astro
+
 const photos = [
-  { img: "/asset/images/IBtes-8.jpg"},
-  { img: "/asset/images/IBtes-7.jpg"},
-  { img: "/asset/images/IBtes-6.jpg"},
-  { img: "/asset/images/IBtes-4.jpg"},
-  { img: "/asset/images/IBtes-5.jpg"},
-  { img: "/asset/images/IBtes-3.jpg"},
-  { img: "/asset/images/IBtes-2.jpg"},
-  { img: "/asset/images/IBtes-1.jpg"},
+  { img: "/asset/images/pc-products.jpg", span: "col-span-2 row-span-2", key: true },
+  { img: "/asset/images/pc-autoparts.jpg",span: "col-span-2" },
+  { img: "/asset/images/pc-cafe.jpg",     span: "" },
+  { img: "/asset/images/pc-trophy.jpg",   span: "" },
+  { img: "/asset/images/pc-team.jpg",     span: "col-span-2" },
+  { img: "/asset/images/pc-garden.jpg",   span: "" },
+  { img: "/asset/images/pc-enter.jpg",    span: "" },
+  { img: "/asset/images/pc-planning.jpg", span: "col-span-2" },
+  { img: "/asset/images/pc-1on1.jpg",     span: "" },
+  { img: "/asset/images/pc-strategy.jpg", span: "" },
+  { img: "/asset/images/pc-finance.jpg",  span: "" },
+  { img: "/asset/images/pc-office.jpg",   span: "" },
+  { img: "/asset/images/pc-homemart.jpg", span: "" },
+  { img: "/asset/images/EPC1.jpg", span: "" },
 ];
 ---
-<section class="py-24 bg-black border-t border-red-500/40 relative">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="mb-16 md:flex md:items-end md:justify-between">
-      <div class="max-w-2xl">
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 tracking-tight">ธุรกิจที่พร้อม <span class="text-yellow-400">โต</span> เพราะเข้าใจหลังบ้านแบงก์ </h2>
-        <p class="text-lg text-gray-400">
-          ส่วนหนึ่งของผู้ประกอบการ SME ที่เราช่วยซัพพอร์ต จนสามารถทะลุกำแพงเรื่องเงิน เปลี่ยนคำปฏิเสธให้ยื่นผ่าน และคว้าเงินทุนไปต่อยอดธุรกิจให้โตไวได้จริง
-        </p>
-      </div>
+
+<section class="py-24 bg-black border-t border-yellow-400/20 relative overflow-hidden">
+
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(250,204,21,0.04)_0%,_transparent_60%)] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+
+    <!-- Section Header -->
+    <div class="mb-14 max-w-2xl">
+      <p class="text-yellow-400 text-sm font-semibold uppercase tracking-[0.2em] mb-4">Private Session Gallery</p>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5 leading-tight tracking-tight">
+        เบื้องหลัง<span class="text-yellow-400">ทุก Session</span><br class="hidden md:block"/> ที่ธุรกิจเริ่มเปลี่ยน
+      </h2>
+      <p class="text-base md:text-lg text-gray-400 leading-relaxed">
+        ทุก session คือการนั่งวิเคราะห์ธุรกิจของคุณโดยตรง — ไม่ใช่สอนทฤษฎี<br class="hidden md:block"/>
+        แต่เจาะลึก วางแผน และหาทางออกร่วมกันแบบตัวต่อตัว
+      </p>
     </div>
 
-    <!-- Responsive Photo Grid -->
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+    <!-- Editorial Photo Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 auto-rows-[220px] md:auto-rows-[240px] gap-3 md:gap-4">
       {photos.map((item) => (
-        <figure class="group relative flex flex-col overflow-hidden rounded-2xl bg-neutral-900 border border-white/5 transition-colors hover:border-yellow-400/50 hover:shadow-[0_0_20px_-5px_rgba(250,204,21,0.3)]">
-          <div class="relative aspect-square overflow-hidden bg-black/50">
-            <img 
-              src={item.img} 
-              
-              class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-              loading="lazy"
-            />
-            {/* Elegant vignette overlay */}
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80 mix-blend-multiply"></div>
-          </div>
-          {/* <figcaption class="p-4 md:p-5 flex-grow flex items-center">
-            <p class="text-sm md:text-base font-medium text-gray-200 leading-snug">
-              {item.caption}
-            </p>
-          </figcaption> */}
+        <figure class={`group relative overflow-hidden rounded-xl bg-neutral-900 border border-white/5 hover:border-yellow-400/40 transition-all duration-500 hover:shadow-[0_0_30px_-8px_rgba(250,204,21,0.25)] ${item.span}`}>
+          <img
+            src={item.img}
+            class={`w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 `}
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-80"></div>
         </figure>
       ))}
     </div>
+
+    <p class="mt-10 text-center text-sm text-gray-600 tracking-wide">
+      ภาพจาก Private Consult Session จริง · ปรับตาม Business Case ของแต่ละท่าน
+    </p>
+
   </div>
 </section>
